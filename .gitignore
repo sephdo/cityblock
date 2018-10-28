@@ -1,0 +1,7 @@
+*.egg-info/
+cityblock/__pycache__/
+cityblock/*.pyc
+install.sh
+quickrun.py
+output/
+scratch/
