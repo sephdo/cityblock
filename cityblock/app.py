@@ -186,7 +186,7 @@ class HouseGenerator:
 
         ## ALT EFFECT: terrace - works well with short roofs
         if terrace:
-            if data.FLOOR_COUNT < 3 and data.ROOF_TYPE in [FpRoof,FlatRoof,StaggeredRoof]:
+            if data.FLOOR_COUNT < 3 and data.ROOF_TYPE in [FpRoof,FlatRoof,StaggeredRoof] and roof.height < data.FLOOR_HEIGHT:
                 roof_bg = Rect(w=int(3*data.FLOOR_WIDTH/4),h=data.FLOOR_HEIGHT,fill=colors.WALL)
                 roof_bg = self.addWindows(roof_bg,data,colors,borderless=borderless,protruding_roof=roof)
                 if roof.width > roof_bg.width:
