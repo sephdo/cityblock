@@ -154,7 +154,7 @@ class HouseGenerator:
 
         ## ALT EFFECT: terrace - works well with short roofs
         if terrace:
-            if data.FLOOR_COUNT < 3 and not data.ROOF_TYPE in [NullRoof]:
+            if data.FLOOR_COUNT < 3 and not data.ROOF_TYPE in [NullRoof] and data.ROOF_HEIGHT < data.FLOOR_HEIGHT:
                 roof_bg = Rect(w=int(3*data.FLOOR_WIDTH/4),h=data.FLOOR_HEIGHT,fill=colors.WALL)
                 if roof.width > roof_bg.width:
                     roof = Canvas.fromSprites([(roof_bg,int((roof.width-roof_bg.width)/2),0),(roof,0,0)])
